@@ -1,0 +1,1 @@
+repo z kodem z laboratorium z pythona 

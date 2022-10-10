@@ -1,0 +1,93 @@
+Linux on z Systems (previously Linux on System z) is the collective term for the Linux operating system compiled to run on IBM mainframes, especially System z machines. Other terms with the same meaning include Linux on zEnterprise 196, Linux on System z10, Linux on System z9, Linux on zSeries, Linux/390, zLinux, z/Linux, etc.
+
+
+
+Linux on System z originated as two separate efforts to port Linux to IBM's largest servers. The first effort, the "Bigfoot" project, developed by Linas Vepstas in late 1998 through early 1999, was an independent distribution and has since been abandoned. IBM published a collection of patches and additions to the Linux 2.2.13 kernel on December 18, 1999, to start today's mainline Linux on System z. Formal product announcements quickly followed in 2000, including the Integrated Facility for Linux (IFL) engines. Think Blue Linux was an early mainframe distribution consisting mainly of Red Hat packages added to the IBM kernel. Commercial Linux distributors introduced mainframe editions very quickly after the initial kernel work, and these mainframe versions have now been available for several years.
+At the start of IBM's involvement, Linux patches for System z included some object code only (OCO) modules, without source code. However, currently Linux on System z is completely free software under the GNU General Public License.
+As of May 2006, according to IBM, over 1,700 customers run Linux on their mainframes.
+
+
+
+Virtualization is required by default on IBM System z; there is no option to run Linux natively. First layer virtualization is provided by the Processor Resource and System Manager (PR/SM) to deploy Logical Partitions (LPARs). A variety of Operating Systems can be started in an LPAR. A System z hypervisor called z/VM can also be run as the second layer virtualization in LPARs to create as many Virtual Machines (VM) as there are resources assigned to the LPARs to support them. This multi-layer virtualization capability allows System z to deploy hundreds or thousands of Virtual Machines within a single physical system.
+The System z PR/SM has earned Common Criteria Evaluation Assurance Level (EAL) 5+ certification, and z/VM has earned Common Criteria EAL4+ certification for its ability to protect virtual machines in an LPAR.
+The first layer of System z virtualization (PR/SM) allows a System z machine to run up to 60 LPARs. Therefore, with PR/SM alone, a System z can deploy up to 60 Linux instances. These can be considered as 60 Virtual Bare Metal servers because PR/SM allows CPUs to be dedicated to individual LPARs. A single System z with 60 z/VM LPARs can deploy a very large number of Virtual Machines as long as there are adequate CPU, memory, and I/O resources configured with the system.
+System z's PR/SM and hardware attributes allow compute resources to be dynamically changed to meet workload demands. CPU and memory resources can be nondisruptively added to the system and dynamically assigned, recognized, and used by LPARs. I/O resources such as IP and SAN ports can also be added dynamically. They are virtualized and shared across all LPARs. The hardware component of System z that provides this capability is called the Channel Subsystem. Each LPAR can be configured to either "see" or "not see" the virtualized I/O ports to establish desired "shareness" or isolation. System z's virtualization capability allows significant reduction in I/O resources because of its ability to share them and drive up utilization.
+Inter-LPAR communication is facilitated by PR/SM and System z hardware. Intra-LPAR communication is facilitated by z/VM which originates the System Defined Networking concept. From a communication stands point, with the first layer virtualization PR/SM and the second layer virtualization z/VM, Linux instances in a System z do not have the need for top-of-rack IP switches and SAN switches. This eliminates a large portion of cost and complexity from the equation. System z's virtualization capability also allows a system to be highly utilized at 80%, 90%, or even 100% and still be productive.
+When Linux applications in an LPAR access data and applications in other LPARs such as CICS, IBM DB2, IMS, Linux, and other mainframe subsystems, running on the same physical mainframe, they can utilize HiperSockets   fast, memory-only TCP/IP connections. As compared to TCP/IP over standard network interface cards (NICs, in the mainframe world called Open System Adapters, OSAs), HiperSockets can improve end-user responsiveness (reduce network latency and processing overhead), security (since there's no network connection to intercept), and reliability (since there's no network connection to lose).
+With the System z models EC12 and BC12, the Hipersocket is extended beyond the physical boundary to facilitate a secure and high speed inter-system communication. Applications in LPAR A in system A can use Hiperscocket to communicate with applications in LPAR B in system B to ensure the security and performance attributes.
+
+
+
+Linux on System z is available in both 32-bit and 64-bit versions. The Linux kernel architecture designation is "s390" for 32-bit kernels and "s390x" for 64-bit kernels. 64-bit distributions can still run 32-bit applications. The 32-bit versions are rapidly losing favor as z/Architecture mainframes become more prevalent than the earlier ESA/390 generation.
+The Linux 2.6.x kernel added substantial support for mainframe hardware, such as ESCON, FICON, SCSI-attached storage devices, and System z cryptographic accelerators. Also several vendor distributions backported 2.6.x patches to the Linux 2.4.x kernel.
+Linux runs on standard general-purpose CPs (Central Processors) as well as IFLs (Integrated Facility for Linux). IFLs are mainframe processors dedicated to running Linux, either natively or under z/VM. Microcode restricts IFLs from running "traditional" workloads, such as z/OS; they are otherwise identical to other System z processors. IFLs are typically less expensive to license from IBM than CPs.
+
+
+
+Linux on System z gives the flexibility of running Linux with the advantages of mainframe hardware. Using virtualization, numerous smaller servers can be combined onto one mainframe, gaining some benefits of centralization, but allowing specialized servers thanks to virtualization support, which can lower operating costs. IBM mainframes allow transparent use of redundant processor execution steps and integrity checking, which is necessary in the financial services industries. Mainframes typically allow hot-swapping of hardware, such as processors and memory. This swapping is typically transparent to the operating system, allowing routine repairs to be performed without shutting down the system.
+
+
+
+Linux on System z is not appropriate for small businesses that would have fewer than about 10 distributed Linux servers, although some expensive per-processor licensed software can quickly reduce that rule of thumb. Most software vendors, including IBM, treat the highly virtualized IFLs just like non-virtualized processors on other platforms for licensing purposes. In other words, a single IFL running scores of Linux instances still counts as one "ordinary" CPU, at the same CPU price, for software licensing. Test, development, quality assurance, training, and redundant production server instances can all run on one IFL (or more IFLs, but only if needed for peak demand performance capacity). Thus, beyond some minimum threshold, Linux on System z can quickly become cost-advantageous when factoring in labor and software costs.
+The cost equation for Linux on System z is not always well understood and is controversial, and many businesses and governments have difficulty measuring, much less basing decisions on, software, labor, and other costs (such as the costs of outage and security breaches). Acquisition costs are often more visible, and small, non-scalable servers are "cheap." Nonetheless, non-acquisition costs are no less real and are usually far greater than hardware acquisition prices. Also, individual users and departments within larger businesses and governments sometimes have difficulty sharing computing infrastructure (or any other resources, for that matter), citing a loss of control. Server centralization, as Linux on System z provides, might reward cooperation with better service and lower costs, but that's not to say that cooperation is always easily accomplished within a corporate bureaucracy.
+Linux on System z also supports less expensive disk storage devices than z/OS because Linux does not require FICON or ESCON attachment, although z/OS may use disk space more efficiently due to hardware-assisted database compression on z/OS. This compression effect is somewhat variable and may be somewhat reduced due to the minimum space allocation requirements for z/OS data sets (a full disk track).
+
+
+
+Mainframe characteristics are designed for such business workloads as transaction processing or large database management. Mainframe design emphasizes input/output performance, implemented via channel I/O. Historically, the principle is to offload I/O activities from the CPU as much as possible, and the z/Architecture additionally offloads cryptographic calculations. Mainframes can scale to numerous processors in a single frame, e.g. up to 64 processors in the case of the System z10 EC Model E64, which gives as much as 28.000 MIPS.
+On the other hand, mainframes in general, and Linux on System z in particular, do not perform well for single task computations. Examples include most scientific simulations, weather forecasting, and molecular modeling. Supercomputers, including Linux-based supercomputers, excel at these workloads. This distinction has blurred since the introduction of the System z10, a machine based on quad-core 4.4 GHz processors with hardware decimal floating point. In this regard, the System z10 more resembles a supercomputer processor than previous mainframes.
+Mainframes do not provide graphics or sound adapters, and are as such ill-suited for digital media editing or computer-aided design (CAD) except perhaps in support roles (e.g. content storage, parts inventories, etc.)
+
+
+
+Like all other versions of Linux, Linux on System z is governed by the GPL free software license. Complete Linux on System z source code is available from numerous groups on a free and equal basis, and architectural support is now part of the main Linux kernel effort. IBM assigns several of its programmers to the community effort, but IBM is by no means the only participant.
+IBM currently supports two Linux distributions, Red Hat and SUSE. Other notable Linux on System z distributions are Debian, Fedora, Slackware, and Gentoo.
+Nearly every free or open-source software package available for Linux generally is available for Linux on System z, including Apache HTTP Server, Samba software, JBoss, PostgreSQL, MySQL, PHP, Python programming language, Concurrent Versions System (CVS), GNU Compiler Collection (GCC), and Perl, among many others.
+Red Hat and SUSE offer mainline support for their distributions running Linux on System z. IBM Global Services also offers support contracts, including 24x7 coverage. Some standard Linux software applications are readily available pre-compiled, including popular closed-source enterprise software packages such as WebSphere, DB2 and Oracle databases and applications, SAP R/3, SAP ERP, and IBM's Java Developer's Kit (JDK), to name only a few.
+
+
+
+IBM offers resources to developers wishing to target Linux for System z:
+The Linux Test Drive, a free program granting a single Linux on System z virtual machine for 30 days.
+The IBM Systems Application Advantage for Linux (Chiphopper), a developer program to help developers write and publish cross-platform Linux software.
+The Community Development System for Linux on System z (CDSL) program, a platform for providing open source developers a platform for porting to Linux on System z.
+The Linux Remote Development Program, a fee-based extended developer support program.
+Linux on System z supports Unicode and ASCII just like any other Linux distribution it is not an EBCDIC-based operating system. Linux is able to read kernel parameters in EBCDIC; this ability is used in z/VM installations.
+Porting Linux applications to Linux on System z is fairly straightforward; issues include endianness (Linux on System z is big-endian) and conversion between 32-bit integers and 31-bit pointers on the s390 architecture.
+Programs can be easily cross compiled to z/Architecture binaries on non-mainframe Linux systems.
+
+
+
+There are at least three software-based System z mainframe emulators.
+FLEX-ES from Fundamental Software is a commercially offered option.
+The open source Hercules emulator supports Linux on System z (and can even run on Linux on System z itself).
+In 2010, IBM introduced the Rational Developer for System z Unit Test Feature, which provides a restricted use execution environment that can run on X86 hardware. IBM's license terms limit use of the Unit Test Feature to certain application development tasks, not including final pre-production compiling or pre-production testing (such as stress testing). The Unit Test Feature includes z/OS (with common middleware) and is also compatible with Linux on System z.
+
+
+
+Comparison of Linux distributions
+OpenSolaris for System z
+Linux on Power
+UNIX System Services
+zIIP
+zAAP
+z/TPF
+z/VSE
+
+
+
+
+
+
+Linux on z Systems
+Linux on z/VM
+Linux on z Systems developer site
+Linux for S/390 and zSeries community wiki
+Linux for S/390 and zSeries web site
+linux-390, users mailing list.
+linux-s390, kernel devel mailing list.
+IBM Software for Linux
+IBM Redbooks for Linux on System z technical know-how
+Virtualization Cookbooks for Red Hat Enterprise Linux (RHEL) and SUSE Linux Enterprise Server (SLES).
+Linux Technology Center at IBM
+Porting GCC to the IBM S/390 platform

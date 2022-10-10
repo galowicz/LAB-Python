@@ -1,0 +1,95 @@
+LenovoEMC (formerly Iomega), sometimes styled lenovo EMC , is a producer of external, portable, and networked storage solutions. Established in the 1980s in Roy, Utah, as Iomega, LenovoEMC has sold more than 410 million digital storage drives and disks. It was a public company, trading on the New York Stock Exchange under the symbol IOM beginning in 1983. The ZIP Drive was Iomega's most notable product.
+
+
+
+Iomega designed and manufactured a range of products to compete with and ultimately replace the 3.5" floppy disk, notably the Zip drive. Initial Iomega products connected to a computer via SCSI or parallel port; later models used USB and FireWire (1394).
+LenovoEMC's current product portfolio includes network-attached storage products, external hard drives, multimedia drives, and removable storage technology.
+
+
+
+The 400d is a multi-bay network attached storage (NAS) device. The 400d is powered by an Intel Atom processor running at 2.13 gigahertz, has 2 gigabytes of RAM, and has a SATA3 controller capable of moving data at 6 gigabits per second. HDMI and USB ports are included. The HDMI-out function enables monitoring live feeds from surveillance cameras. The unit can be set up and managed without a PC using an external display, keyboard, and mouse. The 400d is LenovoEMC's first product sold with its LifeLine 4.1 software, which adds functions such as a domain mode, enhanced Active Directory support and a more robust SDK. McAfee ePolicy Orchestrator is included for centralized security management. All THINK-branded systems from Lenovo pre-installed with Windows 8.1 include LenovoEMC Storage Connector in order make discovery and set-up of the 400d and other LenovoEMC NAS devices smoother.
+
+
+
+At the 2014 International CES, LenovoEMC announced the Lenovo Beacon Home Cloud Centre. The Beacon is a storage device that allows remote sharing of data such as music, pictures, and video. The Beacon allows music and video streaming to multiple devices. Android phones and tablets can be used to control the Beacon. It also has an HDMI port to allow connection to a television or monitor. Up to 6 terabytes of storage, RAID 0 and 1, Wi-Fi, and Bluetooth are all supported.
+
+
+
+Lenovo announced the construction of a research and development facility near S o Paulo, Brazil, in November 2013. This facility will be dedicated to enterprise software and supporting LenovoEMC's development of high-end servers and cloud storage. Construction will cost $100 million and about 100 will be employed at the facility. It will be located in the University of Campinas Science and Technology Park, about 60 miles from S o Paulo.
+
+
+
+
+Iomega started business in Roy, Utah in 1980 (the firmed moved its headquarters to San Diego in 2001). For many years, the firm was a significant name in the data storage industry. Iomega's most famous product, the Zip Drive, was revolutionary as it offered relatively large amounts of storage on easily portable compact cartridges. The original Zip disk's 100MB capacity was a huge improvement over the 1.44MB limitation of floppy disks. The Zip Drive became a common internal and external peripheral for IBM-compatible computers and Macs. However, Zip disk cartridges sometimes failed after a short period, (commonly referred to as the "click of death"). This problem, combined with competition from CD-RW drives, caused Zip Drive sales to decline dramatically, despite later efforts to introduce larger 250MB and 750MB disk versions. Iomega eventually launched a CD-RW drive.
+Without the revenue from sales of its proprietary cartridges, Iomega's sales and profits declined considerably. Iomega's stock price, which was over $100 at its high in the '90s, dipped to around $2 in the mid-2000s. Trying to find a niche for itself, Iomega released devices such as the HipZip MP3 player, the FotoShow Digital Image Center, and numerous external hard drives, optical drives, and NAS products. None of these products were successful.
+In 2012, reporter Vincent Verweij of Dutch broadcaster Katholieke Radio Omroep revealed that the contents of at least 16,000 Iomega hard drives were publicly available on the internet. This was due to the drives being sold with password security disabled by default. Among those affected were KLM, ING Group, and Ballast Nedam, who all had confidential material leaked in this manner. Iomega USA acknowledged the problem and said future models (starting February 2013) would come with password security enabled by default. The company said it would clearly instruct users about the risks of unsecured data.
+
+
+
+
+On April 8, 2008, EMC Corporation announced plans to acquire Iomega for US$213 million. The acquisition was completed in June 2008, making Iomega the SOHO/SMB arm of the world s largest storage company. EMC kept the Iomega brand name alive with products such as the StorCenter NAS line, ScreenPlay TV Link adapter, and v.Clone virtualization software.
+
+
+
+In 2013, EMC formed a joint venture with Lenovo, named LenovoEMC, that took over Iomega's business. LenovoEMC rebranded all of Iomega's products under its name. LenovoEMC designs products for small and medium-sized businesses that cannot afford enterprise-class data storage. LenovoEMC is part of a broader partnership between the two companies announced in August 2012. The partnership also includes an effort to develop x86-based servers and allowing Lenovo to act as an OEM for some EMC hardware. Lenovo is expected to benefit from the relatively high profit margins of the NAS market. LenovoEMC is part of Lenovo's Enterprise Products Group.
+
+
+
+1980: April 2, Iomega Founded
+1982: Released First Bernoulli Box Drive (10MB)
+1987: September, Shipped first Bernoulli Box II model (20 MB)
+1995: January, Shipped Iomega Ditto Tape Drive
+1995: March, Released Zip 100MB Drive
+1995: December, Shipped Jaz Drive 1GB Drive
+1997: June, Announced Buz Multimedia Producer
+1997: November, Unveiled Clik! 40MB Drive
+1998: February, Shipped Jaz 2GB Drive
+1998: December, Shipped Zip 250MB Drive
+1999: Shipped First Internal CD-RW Drive
+
+
+
+2000: September, Launched HipZip Digital Audio Player
+2000: October, Shipped FotoShow Digital Image Center
+2000: December, Shipped First External CD-RW Drive
+2001: January, Announced Peerless Drive System
+2001: March, Shipped DataSafe Network Attached Storage (NAS) Server
+2002: April, Announced Portable and External Hard Drive Family
+2002: August, Shipped Zip 750MB Drive
+2002: November, Launched USB Mini Flash Drive
+2003: March, Launched iStorage Online Storage
+2003: March, Announced External Standard Floppy Drive
+2003: June, Announced first DVD-RW drive
+2003: June, Shipped 50 millionth Zip drive
+2003: November, Introduced Super DVD QuikTouch
+2004: February, Shipped CD-RW/DVD-ROM 7-in-1 Card Reader
+2004: April, Shipped REV 35GB Drive
+2004: April, Shipped Floppy Plus 7-in-1 Card Reader
+2004: September, Introduced Wireless NAS Server
+2004: October, Introduced REV Autoloader 1000
+2005: November, Announced ScreenPlay Multimedia Drive
+2006: September, Introduced desktop RAID storage
+2008: January, Announced eGo Portable Hard Drive
+2008: April, EMC acquired Iomega
+2008: April, Announced ScreenPlay HD Multimedia Drive
+2008: May, Announced eGo Desktop Hard Drive
+2008: August, Introduced ScreenPlay TV Link Multimedia Adapter
+2008: September, Announced the new eGo Helium Portable Hard Drive
+2008: October, Announced StorCenter ix2
+2008: October, Announced ScreenPlay Pro HD Multimedia Drive
+2009: January, Shipped Iomega Home Media Network Hard Drive
+2009: February, Announced StorCenter ix4-100 Server
+2009: April, Ships the StorCenter ix4-200r NAS
+2009: May, New Generation of eGo Portable Hard Drives
+2009: August, Announced StorCenter ix4-200d NAS
+2009: October, Announced StorCenter ix2-200
+2010: January, Shipped Iomega iConnect Wireless Data Station
+2010: January, Announced ScreenPlay Media Player, Director Edition
+2010: January, Announced v.Clone Technology: Take your PC Virtually Anywhere
+2010: April, Iomega celebrates 30 years
+2010: May, Announced StorCenter ix12-300r NAS
+2010: June, Introduced Skin Hard Drive by Iomega
+2011: March, introduced Cloud Edition IX series
+2013: January, Iomega Corporation was renamed to LenovoEMC Limited, which is a joint venture between Lenovo Group Limited and EMC Corporation. Lenovo owns the majority stake in the new company.
+
+

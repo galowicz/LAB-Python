@@ -1,14 +1,18 @@
 #!/usr/bin/env python3
 from pathlib import Path
 # import os
-if __name__ == '__main__':
-	# dev = os.listdir("/dev")
-	# print(dev.__sizeof__())
-	dev = Path('/dev')
+
+def count_files(file):
+	# file = Path(path)
 	count = 0
-	if dev.is_dir():
-		for child in dev.iterdir():
+	for child in file.iterdir():
+		if child.is_dir():
+			count += count_files(child) + 1
+		else:
 			count+=1
-		print(count)
-	else:
-		print("/dev is not a directory")
+	return count
+		
+
+if __name__ == '__main__':
+	dev = Path('/dev')
+	print(count_files(dev))

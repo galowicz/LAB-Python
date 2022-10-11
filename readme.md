@@ -1,5 +1,5 @@
-repo z kodem z laboratorium z pythona 
-# stopień wykonania tematów:
+Repozytorium z kodem z laboratorium z pythona 
+# Stopień wykonania tematów:
  - [x] Wejście/wyjście (./cw1/)
  - [x] Praca z plikami (./cw2/)
  - [ ] Tekst (./cw3/)

@@ -1,43 +1,53 @@
 #!/usr/bin/env python3
 from pathlib import Path
 import sys
-def del_words(fpath):
-	excluded_words = ["i", "oraz", "nigdy", "dlaczego"]
-	replace_by = ["oraz1", "i", "prawie nigdy", "czemu"]
+import argparse
+from file_op import read_file,save_file
 
-
-	if len(excluded_words) != len(replace_by):
-		print("arrays have not equal length")
-		exit(False)
-
-
-	#read text file
-	f = open(fpath,'r')
-	lines = f.readlines()
-	f.close()
+def compare_words(old:str, new:str):
+	punctuation = [',','.','?','!','"',"'",'(',')','\n','\t','/','\\']
+	tmp = old
+	for i in punctuation:
+		tmp = tmp.replace(i, '')
+	#print(tmp.lower())
+	#print('\t' + new + '\n')
 	
-	for i in range(0,len(excluded_words)):
-		newlines = []
-		for line in lines:
-			newline = ""
-			for word in line.split():
-					if word == excluded_words[i]:
-						newline = newline + " " + replace_by[i]
-					else:
-						newline = newline + " " + word
-			#newline = newline + "\n"
-			newlines.append(newline)
-		lines = newlines
-		
-						
-	#save to file
-	f = open(fpath+"new", 'w')
+	if tmp.lower() == new:
+		# print('\t\ty')
+		return True
+	else: 
+		# print('\t\tn')
+		return False
+
+
+def replace_words(lines : list, words : dict):
+
+	newlines = []
 	for line in lines:
-		f.write("{}\n".format(line))
-	f.close()
+		newline = ""
+		for word in line.split():
+			replaced = 0
+			for excluded,replace in words.items():
+				if compare_words(word,excluded):
+					newline = newline + " " + replace
+					replaced = 1
+					break
+				else:
+					replaced = 0
+			if not replaced :
+				newline = newline + " " + word	
+		newlines.append(newline)
 
-
-
+	return newlines
 if __name__ == '__main__':
-	for i in range(1,len(sys.argv)):
-		del_words(sys.argv[i])
+	
+	parser = argparse.ArgumentParser(description="remove words from textfile")
+	parser.add_argument('file',metavar="file", type=str,help="file to clean",nargs='+')
+
+	args = parser.parse_args()
+	#print(args.file)
+
+	for plik in args.file:
+		readlines = read_file(Path(plik))
+		wynik = replace_words(readlines, {'i':"oraz", "oraz": "i", "nigdy":"prawie nigdy", "dlaczego": "czemu"})
+		save_file(Path(plik), wynik)

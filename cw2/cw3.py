@@ -19,6 +19,7 @@ if __name__ == '__main__':
 	parser.add_argument('file',metavar="file", type=str,help="file to convert",nargs='+')
 
 	args = parser.parse_args()
-	
-	for i in range(len(vars(args)['file'])):
-		jpg2png(Path(vars(args)['file'][i]))
+	print(args.file)
+
+	for i in args.file:
+		jpg2png(Path(i))

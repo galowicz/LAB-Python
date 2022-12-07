@@ -7,4 +7,4 @@ Repozytorium z kodem z laboratorium z pythona
  - [x] Klasy (./cw5/)
  - [x] Praca z danymi (./cw6/)
  - [x] Zrównoleglanie obliczeń (./cw7/)
- - [ ] Tests
+ - [x] Tests (Częściowo)
